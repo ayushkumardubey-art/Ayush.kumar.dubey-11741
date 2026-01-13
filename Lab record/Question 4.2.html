@@ -1,0 +1,64 @@
+Q.4.2: Show or hide HTML elements using JavaScript and toggle CSS classes dynamically
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show/Hide and Toggle Class Example</title>
+    <style>
+        body {
+            padding: 15px;
+        }
+        /* Base style for the text box */
+        .box {
+            border: 2px solid #333;
+            width: 320px;
+            padding: 15px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        
+        /* Hides the element */
+        .hidden {
+            display: none;
+        }
+
+        /* Highlight style toggled with JavaScript */
+        .highlight {
+            background-color: yellow;
+            border-color: orange;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h2>Show / Hide Element & Toggle</h2>
+        
+        <button id="toggleBtn">Show / Hide Text</button>
+        <button id="colorBtn">Toggle Highlight</button>
+
+        <p id="textBox" class="box">
+            This paragraph will be shown or hidden and can also change its style dynamically.
+        </p>
+    </center>
+
+    <script>
+        // Selecting elements
+        const textBox = document.getElementById("textBox");
+        const toggleBtn = document.getElementById("toggleBtn");
+        const colorBtn = document.getElementById("colorBtn");
+
+        // Show/Hide element
+        toggleBtn.addEventListener("click", function () {
+            textBox.classList.toggle("hidden");
+        });
+
+        // Toggle highlight class
+        colorBtn.addEventListener("click", function () {
+            textBox.classList.toggle("highlight");
+        });
+    </script>
+
+</body>
+</html>
