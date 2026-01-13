@@ -1,0 +1,63 @@
+Q.2.3 Create a responsive webpage using CSS media queries
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Design with Media Queries</title>
+    <style>
+        /* Base styles (Mobile First) */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #effeff;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile: 1 column */
+            gap: 16px;
+            padding: 20px;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        /* Tablet: 2 columns */
+        @media (min-width: 600px) and (max-width: 1023px) {
+            body {
+                background-color: #defec0; /* Tablet Light Green */
+            }
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Large screens: 3 columns */
+        @media (min-width: 1024px) {
+            body {
+                background-color: #add8e6; /* Large Screen Light Blue */
+            }
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">HELLO</div>
+        <div class="box">WELCOME</div>
+        <div class="box">TO</div>
+        <div class="box">E-LIBRARY</div>
+        <div class="box">CONTACT</div>
+        <div class="box">ELIB@LIB.ORG</div>
+    </div>
+
+</body>
+</html>
