@@ -1,0 +1,89 @@
+Q3.2: Write JavaScript to demonstrate conditional statements and looping
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditional & Looping example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e9eff5;
+            padding: 20px;
+        }
+        .container {
+            width: 400px;
+            background: #fff;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        hr {
+            margin: 12px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>JS Conditional & Looping Demo</h2>
+
+    <script>
+        // Conditional Statement
+        let number = 10;
+
+        document.write("<p class='section-title'>Conditional Statement: </p>");
+
+        if (number > 0) {
+            document.write("<p>The number is positive.</p>");
+        } 
+        else if (number < 0) {
+            document.write("<p>The number is negative.</p>");
+        } 
+        else {
+            document.write("<p>The number is zero.</p>");
+        }
+
+        document.write("<hr>");
+
+        // For Loop
+        document.write("<p class='section-title'>For Loop (1 to 5):</p>");
+        for (let i = 1; i <= 5; i++) {
+            document.write(i + " ");
+        }
+
+        document.write("<hr>");
+
+        // While Loop
+        document.write("<p class='section-title'>While Loop (5 to 1):</p>");
+        let x = 5;
+        while (x >= 1) {
+            document.write(x + " ");
+            x--;
+        }
+
+        document.write("<hr>");
+
+        // Do...While Loop
+        document.write("<p class='section-title'>Do...While Loop (1 to 3):</p>");
+        let y = 1;
+        do {
+            document.write(y + " ");
+            y++;
+        } while (y <= 3);
+
+    </script>
+</div>
+
+</body>
+</html>
