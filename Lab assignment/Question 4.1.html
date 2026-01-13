@@ -1,0 +1,85 @@
+Q.4.1: Write an arrow function isEven(num) that returns true if a number is even
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Even Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Added for better fit */
+        }
+        button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+            background: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #004bcc;
+        }
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h3>Even Number Checker</h3>
+        <input type="number" id="numInput" placeholder="Enter a number">
+        <button onclick="checkEven()">Check</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // arrow function to check even number
+        const isEven = (num) => {
+            return num % 2 === 0;
+        };
+
+        function checkEven() {
+            const value = document.getElementById("numInput").value;
+            const result = document.getElementById("result");
+
+            if (value === "") {
+                result.textContent = "Please enter a number.";
+                return;
+            }
+
+            if (isEven(Number(value))) {
+                result.textContent = value + " is even \u2714"; // Checkmark symbol
+            } else {
+                result.textContent = value + " is not even \u274C"; // Cross symbol
+            }
+        }
+    </script>
+
+</body>
+</html>
