@@ -1,0 +1,70 @@
+Q.4.4: Create and manipulate elements using JavaScript (append, remove, modify)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Element Manipulation Example</title>
+    <style>
+        .box {
+            width: 350px;
+            padding: 15px;
+            border: 2px solid #333;
+            margin-top: 20px;
+        }
+        .item {
+            padding: 5px;
+            margin: 5px;
+            background-color: lightyellow;
+            border: 1px solid #555;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h2>Creating & Manipulating Elements Using JavaScript</h2>
+
+        <button id="addBtn">Add Item</button>
+        <button id="removeBtn">Remove Last Item</button>
+        <button id="modifyBtn">Modify First Item</button>
+
+        <div id="container" class="box">
+            <p class="item">Item 1</p>
+        </div>
+    </center>
+
+    <script>
+        const addBtn = document.getElementById("addBtn");
+        const removeBtn = document.getElementById("removeBtn");
+        const modifyBtn = document.getElementById("modifyBtn");
+        const container = document.getElementById("container");
+
+        let count = 1;
+
+        // APPEND: Add a new child node
+        addBtn.addEventListener("click", function () {
+            count++;
+            const newItem = document.createElement("p");
+            newItem.textContent = "Item " + count;
+            newItem.classList.add("item");
+            container.appendChild(newItem); // append new element
+        });
+
+        // REMOVE: Remove the last child element
+        removeBtn.addEventListener("click", function () {
+            if (container.lastElementChild) {
+                container.lastElementChild.remove();
+                count--;
+            }
+        });
+
+        // MODIFY: Change the content of the first child element
+        modifyBtn.addEventListener("click", function () {
+            if (container.firstElementChild) {
+                container.firstElementChild.textContent = "Modified Item (Updated)";
+                container.firstElementChild.style.background = "lightgreen";
+            }
+        });
+    </script>
+
+</body>
+</html>
