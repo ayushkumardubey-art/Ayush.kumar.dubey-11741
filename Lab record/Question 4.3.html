@@ -1,0 +1,58 @@
+Q.4.3: Add interactivity using event listeners (addEventListener, removeEventListener)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Example</title>
+    <style>
+        .box {
+            width: 300px;
+            padding: 15px;
+            margin-top: 20px;
+            border: 2px solid black;
+            transition: 0.3s;
+        }
+        .active {
+            background-color: lightgreen;
+            border-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h2>Interactivity Using Event Listeners</h2>
+        
+        <button id="clickBtn">Click Me (Mouse Event)</button>
+        <button id="removeBtn">Remove Click Event</button>
+
+        <p class="box" id="textBox">Press any key on your keyboard!</p>
+    </center>
+
+    <script>
+        const clickBtn = document.getElementById("clickBtn");
+        const removeBtn = document.getElementById("removeBtn");
+        const textBox = document.getElementById("textBox");
+
+        // Mouse Event: Function to run on button click
+        function showMessage() {
+            alert("Button clicked! (Mouse Event Triggered)");
+        }
+
+        // Add mouse event listener
+        clickBtn.addEventListener("click", showMessage);
+
+        // Remove mouse event listener
+        removeBtn.addEventListener("click", function () {
+            clickBtn.removeEventListener("click", showMessage);
+            alert("Click event listener removed!");
+        });
+
+        // Keyboard Event: Runs when any key is pressed
+        document.addEventListener("keydown", function (event) {
+            textBox.classList.toggle("active");
+            textBox.textContent = "You pressed: " + event.key;
+        });
+    </script>
+
+</body>
+</html>
