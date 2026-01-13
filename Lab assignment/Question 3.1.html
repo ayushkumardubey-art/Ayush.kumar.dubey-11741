@@ -1,0 +1,84 @@
+Q.3.1: Count how many even and odd numbers are there
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Even and Odd Numbers</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f8ff;
+            padding: 30px;
+        }
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background: #0077ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover { background: #005fcc; }
+        #result {
+            margin-top: 15px;
+            padding: 12px;
+            background: #e8f4ff;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Count Even and Odd Numbers</h2>
+        <label>Enter Numbers (separated by comma): </label>
+        <input type="text" id="numbers" placeholder="Example: 1,2,3,4,5">
+        <button onclick="countEvenOdd()">Count</button>
+        <div id="result">Result will appear here</div>
+    </div>
+
+    <script>
+        function countEvenOdd() {
+            // Read user input
+            let input = document.getElementById("numbers").value;
+            
+            // Split into array
+            let arr = input.split(",").map(Number);
+            let even = 0;
+            let odd = 0;
+
+            // Count even & odd
+            for (let num of arr) {
+                if (num % 2 == 0) {
+                    even++;
+                } else {
+                    odd++;
+                }
+            }
+
+            // Display output
+            document.getElementById("result").innerHTML = 
+            "Total Even Numbers: " + even + "<br>" +
+            "Total Odd Numbers: " + odd;
+        }
+    </script>
+
+</body>
+</html>
