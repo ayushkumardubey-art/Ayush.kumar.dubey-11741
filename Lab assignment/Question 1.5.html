@@ -1,0 +1,51 @@
+Q.1.5: Design a webpage that embeds an audio file (mp3) and a video file (mp4)
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Media</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #fefefe;
+            margin: 20px;
+        }
+        .media-container {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        video, audio {
+            width: 100%;
+            max-width: 600px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Embedded Media Webpage</h1>
+
+    <div class="media-container">
+        <h2>Embedded Audio File</h2>
+        <audio controls>
+            <source src="chirping-birds-hd-1-271401.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="media-container">
+        <h2>Embedded Video File</h2>
+        <video controls width="640" height="360">
+            <source src="Student Life - Rungta College Bhilai Raipur.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+</body>
+</html>
