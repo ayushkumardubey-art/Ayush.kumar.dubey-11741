@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tech Quiz | Ayush Kumar Dubey</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>CS Knowledge Check</h1>
+            <div class="quiz-info">
+                <span id="question-count">Question: 1/5</span>
+                <span id="timer-display">Time: 15s</span>
+            </div>
+        </header>
+
+        <main id="quiz-area">
+            <h2 id="question-text">Loading...</h2>
+            <div class="options-container" id="options-list"></div>
+            <button id="next-btn" class="hidden">Next Question</button>
+        </main>
+
+        <div id="result-area" class="hidden">
+            <div class="score-card">
+                <h2>Quiz Completed!</h2>
+                <p>Score: <span id="final-score">0</span> / <span id="total-score">0</span></p>
+                <p id="remarks"></p>
+                <button onclick="location.reload()">Restart Quiz</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Submitted by: Ayush Kumar Dubey (ERP: 11741)</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
