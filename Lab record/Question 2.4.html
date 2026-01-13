@@ -1,0 +1,156 @@
+Q.No.2.4: Create a responsive web page using media queries
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+        }
+        
+        /* Header & Nav Styling */
+        header {
+            background-color: #333; /* Note: Screenshot is blurry, used std dark grey */
+            color: white;
+            padding: 1rem 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #2c3e50;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+        }
+
+        /* Content Area Styling */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .content article {
+            background-color: white;
+            padding: 1.5rem;
+            flex-basis: 100%; /* Full width on mobile */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        /* MEDIA QUERY: Tablet (min-width: 600px) */
+        @media (min-width: 600px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .hero p {
+                font-size: 1.25rem;
+            }
+            .content article {
+                flex-basis: 45%; /* Two columns */
+            }
+        }
+
+        /* MEDIA QUERY: Desktop (min-width: 900px) */
+        @media (min-width: 900px) {
+            header {
+                padding: 2rem;
+            }
+            nav a {
+                font-size: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 4rem;
+            }
+            .hero p {
+                font-size: 1.5rem;
+            }
+            .content {
+                gap: 2rem;
+            }
+            .content article {
+                flex-basis: 30%; /* Three columns */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome To Our E Library</h1>
+        <p>we provide resource's for your study.</p>
+    </section>
+
+    <div class="content">
+        <article>
+            <h3>Our Services</h3>
+            <p>We offer a range of services including pdf, notes, and hand written notes.</p>
+        </article>
+        <article>
+            <h3>Assurity</h3>
+            <p>A GROUP OF MEMBERS CHECK THE RESOURCE BEFORE UPLOADING IT.</p>
+            <p>*****</p>
+            <p>Verified By TRUSTPILOT</p>
+        </article>
+        <article>
+            <h3>About Us</h3>
+            <p>A Group Of Students Manage This Website</p>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; All Rights Are Reserved</p>
+    </footer>
+
+</body>
+</html>
