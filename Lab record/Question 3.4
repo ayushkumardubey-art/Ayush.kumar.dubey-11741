@@ -1,0 +1,129 @@
+Q3.4: Handle HTML form validation using JavaScript events
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation with Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef3f8;
+            padding: 20px;
+        }
+        .form-box {
+            width: 350px;
+            background: white;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+        }
+        h2 {
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005fa3;
+        }
+        small {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Form Validation Demo</h2>
+    <form id="myForm" onsubmit="return validateForm()">
+        
+        <label>Name:</label>
+        <input type="text" id="name" oninput="checkName()">
+        <small id="nameError">Name must be at least 3 characters</small>
+
+        <label>Email:</label>
+        <input type="text" id="email" oninput="checkEmail()">
+        <small id="emailError">Enter a valid email</small>
+
+        <label>Age:</label>
+        <input type="number" id="age" oninput="checkAge()">
+        <small id="ageError">Age must be 18 or above</small>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    // oninput validation
+
+    function checkName() {
+        let name = document.getElementById("name").value;
+        let err = document.getElementById("nameError");
+
+        if (name.length < 3) {
+            err.style.display = "block";
+            return false;
+        } else {
+            err.style.display = "none";
+            return true;
+        }
+    }
+
+    function checkEmail() {
+        let email = document.getElementById("email").value;
+        let err = document.getElementById("emailError");
+
+        if (!email.includes("@") || !email.includes(".")) {
+            err.style.display = "block";
+            return false;
+        } else {
+            err.style.display = "none";
+            return true;
+        }
+    }
+
+    function checkAge() {
+        let age = document.getElementById("age").value;
+        let err = document.getElementById("ageError");
+
+        if (age < 18) {
+            err.style.display = "block";
+            return false;
+        } else {
+            err.style.display = "none";
+            return true;
+        }
+    }
+
+    // onsubmit validation
+    function validateForm() {
+        let validName = checkName();
+        let validEmail = checkEmail();
+        let validAge = checkAge();
+
+        if (validName && validEmail && validAge) {
+            alert("Form submitted successfully!");
+            return true;
+        } else {
+            alert("Please correct the errors before submitting.");
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
