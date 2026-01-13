@@ -1,0 +1,148 @@
+Q.No.2.5: Use div and span elements for layout and apply styling with CSS
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Div Span Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.5;
+            background: linear-gradient(180deg, #fdfbfb, #ebedee);
+        }
+
+        /* Layout Container */
+        .main {
+            padding: 1rem;
+        }
+
+        /* Header Styling */
+        .header {
+            background: linear-gradient(135deg, #667eea, #764ba2); /* Approx purple/blue gradient */
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Navigation Styling */
+        .nav {
+            display: flex;
+            flex-direction: column; /* Mobile first stack */
+            background: linear-gradient(135deg, #66a6ff, #89f7fe); /* Light blue gradient */
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 12px;
+        }
+        .nav span {
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .nav span:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+        }
+
+        /* Grid Layout for Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column on mobile */
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Card Styling */
+        .card {
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover Effect */
+        .card:hover {
+            background: linear-gradient(90deg, #ff512f, #dd2476); /* Orange/Pink gradient */
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #11998e, #38ef7d); /* Green gradient */
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 12px;
+        }
+
+        /* Tablet Media Query */
+        @media (min-width: 600px) {
+            .nav {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+            }
+        }
+
+        /* Desktop Media Query */
+        @media (min-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+            }
+            .header {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        
+        <div class="header">
+            <span><strong>WELCOME TO OUR E LIBRARY</strong></span>
+        </div>
+
+        <div class="nav">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <span><strong><center>ALL RESOURCES ARE FREE</center></strong></span>
+            </div>
+            <div class="card">
+                <span><strong><center>HAND WRITTEN NOTES</center></strong></span>
+            </div>
+            <div class="card">
+                <span><strong><center>12/7 SUPPORT</center></strong></span>
+            </div>
+            <div class="card">
+                <span><strong><center>ASSURANCE OF RIGHT CONTENT</center></strong></span>
+            </div>
+            <div class="card">
+                <span><strong><center>GET TOKEN</center></strong></span>
+            </div>
+            <div class="card">
+                <span><strong><center>SHARE LIVE DOUBT</center></strong></span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>&copy; ALL RIGHTS ARE RESERVED</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
