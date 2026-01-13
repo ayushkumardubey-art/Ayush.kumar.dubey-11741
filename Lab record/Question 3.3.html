@@ -1,0 +1,81 @@
+Q3.3: Create and invoke user-defined functions in JavaScript (use var, let, const)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions & Scope Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef3f8;
+            padding: 20px;
+        }
+        .box {
+            width: 420px;
+            margin: auto;
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            margin: 8px 0;
+        }
+        hr {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>JS Functions & Scope Demonstration</h2>
+
+    <script>
+        // User-defined Functions
+        
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+
+        function addNumbers(a, b) {
+            return a + b;
+        }
+
+        function showSquare(n) {
+            return n * n;
+        }
+
+        document.write("<p><b>Function Outputs:</b></p>");
+        document.write("<p>" + greet("Student") + "</p>");
+        document.write("<p>Sum of 5 and 3: " + addNumbers(5, 3) + "</p>");
+        document.write("<p>Square of 6: " + showSquare(6) + "</p>");
+
+        document.write("<hr>");
+
+        // var, let, const example
+
+        document.write("<p><b>Scope Demonstration (var, let, const):</b></p>");
+
+        // var example (function-scoped)
+        var x = 10;
+        document.write("<p>var x = " + x + " (function scoped)</p>");
+
+        // let example (block-scoped)
+        {
+            let y = 20;
+            document.write("<p>let y = " + y + " (block scoped)</p>");
+            // y is not accessible here (scope ends)
+        }
+
+        // const example (cannot be reassigned)
+        const pi = 3.14;
+        document.write("<p>const pi = " + pi + " (constant value)</p>");
+        // Trying to reassign const pi would cause an error
+    </script>
+</div>
+
+</body>
+</html>
