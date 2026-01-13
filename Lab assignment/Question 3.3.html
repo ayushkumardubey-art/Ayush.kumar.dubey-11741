@@ -1,0 +1,89 @@
+Q.3.3: Find the sum of all numbers in an array
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Sum Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            /* Using the exact background image URL from the document */
+            background-image: url(https://t4.ftcdn.net/jpg/04/36/67/31/360_F_436673178_VbvC3aToSRYJSH0PEECESTVfSTedtWtF.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            border: 2px solid #0077cc;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .box h2 {
+            text-align: center;
+            color: #0077cc;
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            margin-top: 12px;
+            padding: 10px 20px;
+            background: #0077cc;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        #answer {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Sum of Values in an Array</h2>
+        <label>Type numbers separated by commas:</label>
+        <input type="text" id="nums" placeholder="Example: 4, 9, 6, 2">
+        <button onclick="calculate()">Get Sum</button>
+        <p id="answer"></p>
+    </div>
+
+    <script>
+        function calculate() {
+            let text = document.getElementById("nums").value;
+            // Split by comma, trim spaces, and convert to Number
+            let items = text.split(",").map(x => Number(x.trim()));
+            
+            // Calculate sum using reduce
+            let total = items.reduce((acc, val) => acc + val, 0);
+
+            document.getElementById("answer").innerHTML = "Total Sum: " + total;
+        }
+    </script>
+
+</body>
+</html>
