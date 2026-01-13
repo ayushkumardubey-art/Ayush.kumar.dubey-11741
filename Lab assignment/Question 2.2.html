@@ -1,0 +1,40 @@
+Q.2.2 Design a card layout using div elements to demonstrate the box model
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model Card</title>
+    <style>
+        body {
+            background-color: #fefefe;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        .card {
+            width: 300px;
+            margin: 20px auto; /* margin = outside the box */
+            padding: 20px;     /* padding = space inside the box */
+            border: 2px solid #333; /* border = edge of the box */
+            background-color: #fff;
+            box-shadow: 4px 8px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .card p {
+            margin-bottom: 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>NOTICE</h2>
+        <p>This is to inform that on 22/11/2025 will be submission of iwi lab assignment</p>
+    </div>
+
+</body>
+</html>
