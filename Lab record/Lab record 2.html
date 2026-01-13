@@ -1,0 +1,29 @@
+Q.No.2.1: Apply Inline, Internal, and External CSS styles to HTML elements
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Types</title>
+    
+    <link rel="stylesheet" href="data:text/css,.external{background: black; color: white; padding: 10px;}">
+
+    <style>
+        h2 {
+            color: green;
+        }
+        .internal {
+            background: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="color: red;">This is Inline CSS</h2>
+
+    <h2>This is Internal CSS</h2>
+    <div class="internal">Internal CSS Div</div>
+
+    <p class="external">This Is External CSS</p>
+
+</body>
+</html>
