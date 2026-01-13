@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* 1. Universal Selector */
+        * {
+            margin: 5px;
+            font-family: Arial;
+        }
+
+        /* 2. Class Selector */
+        .box {
+            background: lightblue;
+            padding: 10px;
+            border: 2px solid blue;
+        }
+
+        /* 3. ID Selector */
+        #unique {
+            background: black;
+            color: white;
+            padding: 10px;
+        }
+
+        /* 4. Group Selector */
+        h2, h3 {
+            color: green;
+            text-decoration: underline;
+        }
+
+        /* 5. Descendant Selector */
+        div p {
+            background: yellow;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Class Selector</h2>
+    <div class="box">This uses Class Selector</div>
+
+    <h3>ID Selector</h3>
+    <div id="unique">This uses ID Selector</div>
+
+    <h2>Group Selector</h2>
+    <h3>Group Selector Applied 2</h3>
+
+    <h2>Descendant Selector</h2>
+    <div>
+        <p>This paragraph is inside a div Descendant Selector applied</p>
+    </div>
+
+</body>
+</html>
