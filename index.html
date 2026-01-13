@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PORTFOLIO.</div>
+        <ul class="nav-links">
+            <li><a href="#about">01. About</a></li>
+            <li><a href="#elements">02. Tech Stack</a></li>
+            <li><a href="#assignments">03. Academic</a></li>
+            <li><a href="#miniprojects">04. Projects</a></li>
+            <li><a href="#contact">05. Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <header class="hero">
+        <span class="hero-intro">Hi, my name is</span>
+        <h1>Ayush Kumar Dubey</h1>
+        <p>I am a <span class="typewriter" id="typing-text"></span></p>
+        <a href="#miniprojects" class="btn">View My Projects</a>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div style="max-width: 700px;">
+            <p>
+                Hello! I am a student who loves building things for the web. 
+                I started my journey exploring HTML & CSS, and now I am diving deeper into JavaScript.
+                <br><br>
+                This portfolio is a collection of my <strong>Academic Lab Records</strong>, <strong>Practical Assignments</strong>, and my <strong>Mini Projects</strong>. 
+                I built this site myself to practice what I learn in class.
+            </p>
+        </div>
+    </section>
+
+    <section id="elements">
+        <h2>How I Built This</h2>
+        <p style="margin-bottom: 30px;">This portfolio was constructed using the following core HTML elements:</p>
+        
+        <div class="tech-grid">
+            <div class="tech-item">
+                <span class="tech-tag">&lt;div&gt;</span>
+                <p>Used as the main building block to group content and create the layout cards.</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-tag">&lt;span&gt;</span>
+                <p>Used for inline styling, specifically for the "Typewriter" text effect and highlighting colors.</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-tag">&lt;nav&gt;</span>
+                <p>The semantic tag used for the top navigation bar containing the links.</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-tag">&lt;section&gt;</span>
+                <p>Used to divide the page into distinct areas: About, Work, and Contact.</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-tag">&lt;a&gt;</span>
+                <p>Anchor tags used for navigation links and the buttons to download PDFs.</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-tag">&lt;button&gt;</span>
+                <p>Used specifically for the Dark/Light mode toggle switch in the top right.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="assignments">
+        <h2>Academic Submission</h2>
+        
+        <h3 class="subsection-title">📂 Lab Records</h3>
+        <div class="assignment-grid">
+            <div class="card">
+                <h4>Lab Record 1</h4>
+                <p>Topic: Basic HTML Structure & Tags.</p>
+                <div class="btn-group">
+                    <a href="1.pdf" target="_blank" class="btn-pdf">View PDF 📄</a>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Lab Record 2</h4>
+                <p>Topic: CSS Styling, Selectors & Colors.</p>
+                <div class="btn-group">
+                    <a href="2.pdf" target="_blank" class="btn-pdf">View PDF 📄</a>
+                </div>
+            </div>
+             <div class="card">
+                <h4>Lab Record 3</h4>
+                <p>Topic: JS Calculator, Loops, Scope, & Form Validation.</p>
+                <div class="btn-group">
+                    <a href="3.pdf" target="_blank" class="btn-pdf">View PDF 📄</a>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Lab Record 4</h4>
+                <p>Topic: Arrays, Objects & Loop Iterations.</p>
+                <div class="btn-group">
+                    <a href="4.pdf" target="_blank" class="btn-pdf">View PDF 📄</a>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="subsection-title">🛠️ Practical Assignments</h3>
+        <div class="assignment-grid">
+            <div class="card">
+                <h4>Practical Assignment 1</h4>
+                <p>Task: Create a fully Responsive Layout.</p>
+                <div class="btn-group">
+                    <a href="ASSIGNMENT 1.pdf" target="_blank" class="btn-pdf">View PDF 📄</a>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Practical Assignment 2</h4>
+                <p>Task: Form Validation using JS Logic.</p>
+                <div class="btn-group">
+                    <a href="ASSIGNMENT 2.pdf" target="_blank" class="btn-pdf">View PDF 📄</a>
+                </div>
+            </div>
+             <div class="card">
+                <h4>Practical Assignment 3</h4>
+                <p>Task: Dynamic Content Loading & DOM.</p>
+                <div class="btn-group">
+                    <a href="ASSIGNMENT 3.pdf" target="_blank" class="btn-pdf">View PDF 📄</a>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Practical Assignment 4</h4>
+                <p>Task: Fetching Data from a Public API.</p>
+                <div class="btn-group">
+                    <a href="ASSIGNMENT 4.pdf" target="_blank" class="btn-pdf">View PDF 📄</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="miniprojects">
+        <h2>Mini Projects</h2>
+        <p style="margin-bottom: 30px;">Click on any card below to launch the project.</p>
+        
+        <div class="assignment-grid">
+            
+            <a href="quiz/index.html" class="project-link"> 
+                <div class="card" style="text-align: center; height: 100%; justify-content: center; cursor: pointer;">
+                    <div class="project-icon">🚀</div>
+                    <h4>Mini Project 01</h4>
+                    <p>Click to view Project 1</p>
+                    <span class="btn-pdf" style="margin-top: 10px;">Launch Project</span>
+                </div>
+            </a>
+
+            <a href="Memory%20Card%20Game/Index.html" class="project-link">
+                <div class="card" style="text-align: center; height: 100%; justify-content: center; cursor: pointer;">
+                    <div class="project-icon">🎵</div>
+                    <h4>Mini Project 02</h4>
+                    <p>Click to view Project 2</p>
+                    <span class="btn-pdf" style="margin-top: 10px;">Launch Project</span>
+                </div>
+            </a>
+
+            <a href="Drawing%20app/index.html" class="project-link">
+                <div class="card" style="text-align: center; height: 100%; justify-content: center; cursor: pointer;">
+                    <div class="project-icon">🎮</div>
+                    <h4>Mini Project 03</h4>
+                    <p>Click to view Project 3</p>
+                    <span class="btn-pdf" style="margin-top: 10px;">Launch Project</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p style="margin-bottom: 20px;">
+            Submitted by: <strong>Ayush Kumar Dubey</strong><br>
+            Roll Number: <strong>RU-25-11741</strong>
+        </p>
+        <a href="mailto:ayush.kumar.dubey@rungta.org" class="btn">Send an Email</a>
+    </section>
+
+    <footer>
+        <p>Designed & Built by Ayush Kumar Dubey | &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
