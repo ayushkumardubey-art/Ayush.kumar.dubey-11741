@@ -1,0 +1,66 @@
+Q.4.1: Demonstrate DOM manipulation using getElementById(), querySelector(), and innerHTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f1f5f9;
+            /* Centering content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            width: 350px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        button {
+            padding: 10px 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            background: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #004099;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>DOM Manipulation Example</h2>
+        <p id="textArea">This text will change when you press a button.</p>
+        <p class="message">Waiting for user action...</p>
+
+        <button onclick="changeText()">Change Text</button>
+        <br>
+        <button onclick="updateMessage()">Update Message</button>
+    </div>
+
+    <script>
+        // Using getElementById()
+        function changeText() {
+            let para = document.getElementById("textArea");
+            para.innerHTML = "Text changed using getElementById() and innerHTML!";
+        }
+
+        // Using querySelector()
+        function updateMessage() {
+            let msg = document.querySelector(".message");
+            msg.innerHTML = "querySelector() updated this message successfully.";
+        }
+    </script>
+</body>
+</html>
