@@ -1,0 +1,80 @@
+Q.No.3: Create a table-based layout with merged cells, alignment, and caption
+
+<html>
+<head>
+    <title>Table Layout</title>
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="0" align="center">
+        <caption><strong>Student Timetable</strong></caption>
+        
+        <tr>
+            <th rowspan="2">Day</th>
+            <th colspan="6">Subjects</th> 
+        </tr>
+        <tr>
+            <th>9 AM-10 AM</th>
+            <th>10 AM-11 AM</th>
+            <th>11 AM-12 PM</th>
+            <th>12 PM-1 PM</th>
+            <th>1 PM-2 PM</th>
+            <th>2 PM-3 PM</th>
+            <th>3 PM-4 PM</th>
+        </tr>
+
+        <tr>
+            <td align="center">Monday</td>
+            <td align="center">Math</td>
+            <td align="center">IWI</td>
+            <td align="center">PFC</td>
+            <td align="center">NALS</td>
+            <td align="center">LUNCH</td>
+            <td align="center">LAB</td>
+            <td align="center">C.P</td>
+        </tr>
+
+        <tr>
+            <td align="center">Tuesday</td>
+            <td colspan="2" align="center">IWI</td>
+            <td align="center">PFC</td>
+            <td align="center">CDC</td>
+            <td align="center">LUNCH</td>
+            <td colspan="2" align="center">CDC</td>
+        </tr>
+
+        <tr>
+            <td align="center">Wednesday</td>
+            <td align="center">Math</td>
+            <td align="center">CP</td>
+            <td colspan="2" align="center">Computer Lab</td>
+            <td align="center">LUNCH</td>
+            <td align="center">DL</td>
+            <td align="center">C.P</td>
+        </tr>
+
+        <tr>
+            <td align="center">Thursday</td>
+            <td align="center">CDC</td>
+            <td align="center">IWI</td>
+            <td align="center">C.P</td>
+            <td align="center">Breather</td>
+            <td align="center">LUNCH</td>
+            <td align="center">NALS</td>
+            <td align="center">PFC</td>
+        </tr>
+
+        <tr>
+            <td align="center">Friday</td>
+            <td colspan="2" align="center">Computer Lab</td>
+            <td align="center">PFC</td>
+            <td align="center">IWI</td>
+            <td colspan="3" align="center"></td> </tr>
+
+        <tr>
+            <td align="center">Saturday</td>
+            <td align="center">Math</td>
+            <td align="center">C.P</td>
+            <td colspan="5" align="center"></td> </tr>
+    </table>
+</body>
+</html>
