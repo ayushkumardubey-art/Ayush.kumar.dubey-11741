@@ -239,6 +239,47 @@ h2::before {
     color: var(--bg-color); 
 }
 
+/* --- NEW: LIVE CODE BUTTONS (Added this section) --- */
+.question-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.btn-small {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-small:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Dark mode specific for small buttons */
+body.dark-mode .btn-small {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: #444;
+}
+
+body.dark-mode .btn-small:hover {
+    background-color: var(--secondary-color);
+    color: #2d3436; /* Dark text for better contrast on light blue */
+    border-color: var(--secondary-color);
+}
+
 /* --- MINI PROJECTS STYLING --- */
 .project-link {
     text-decoration: none;
