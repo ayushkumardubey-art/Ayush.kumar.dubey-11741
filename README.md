@@ -36,7 +36,7 @@ Here are the major projects included in this portfolio:
 | # | Project Name | Key Features | Status |
 |:-:| :--- | :--- | :--- |
 | 01 | **[Live Quiz Application](./quiz/index.html)** | ⏱️ Timer Logic, Array Storage, Score Tracking | ✅ Completed |
-| 02 | **[Memory Card Game](./Memory%20Card%20Game/Index.html)** | 🧠 Flip Animation, Shuffle Algorithm, Match Logic | ✅ Completed |
+| 02 | **[Memory Card Game](./Memory%20Card%20Game/index.html)** | 🧠 Flip Animation, Shuffle Algorithm, Match Logic | ✅ Completed |
 | 03 | **[Canvas Drawing App](./Drawing%20app/index.html)** | 🎨 HTML5 Canvas API, Mouse Events, Brush Size | ✅ Completed |
 
 *(Click the project names above to view the source code)*
