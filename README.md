@@ -49,7 +49,6 @@ Here are the major projects included in this portfolio:
 - [x] **Exp 2:** Creating Lists (Ordered, Unordered, Definition)
 - [x] **Exp 3:** HTML Forms & Validation
 - [x] **Exp 4:** CSS Box Model & Flexbox
-- [x] **Exp 4:** JavaScript Event Listeners
 
 ---
 
