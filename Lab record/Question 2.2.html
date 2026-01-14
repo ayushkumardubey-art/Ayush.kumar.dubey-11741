@@ -5,42 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            /* FIXED: Matches your file name */
             background-image: url('imagesboxmodel.png');
-            background-size: cover;
+            
+            /* FIXED: 'contain' fits the whole image so it doesn't zoom in */
+            background-size: contain;
+            
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            background-color: #e0e0e0; /* Grey background for empty space */
+            
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
             height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Stacks items vertically */
+            justify-content: flex-end; /* Moves the card to the bottom */
             align-items: center;
         }
 
         .demo-container {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px 15px 0 0; /* Rounded top corners only */
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
             text-align: center;
-            max-width: 350px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 0; /* Sticks to bottom */
         }
 
         .box-model-example {
-            width: 200px;
+            width: 150px;
             background-color: #e3f2fd;
             color: #1565c0;
             border: 5px solid #1565c0;
-            padding: 20px;
-            margin: 20px auto;
+            padding: 15px;
+            margin: 10px auto;
             font-weight: bold;
             border-radius: 8px;
+            font-size: 14px;
         }
 
         .label {
-            font-size: 14px;
+            font-size: 13px;
             color: #555;
             margin-bottom: 5px;
         }
@@ -50,15 +60,15 @@
 
     <div class="demo-container">
         <h2>CSS Box Model</h2>
-        <p class="label">Background: imagesboxmodel.png</p>
+        <p class="label">Background Image: Box Model Diagram</p>
 
         <div class="box-model-example">
-            Content
+            Content Box
             <br>
-            <span style="font-size: 12px; font-weight: normal;">(Padding: 20px)</span>
+            <span style="font-size: 11px; font-weight: normal;">(Padding inside)</span>
         </div>
 
-        <p class="label">The space around the blue box is the <b>Margin</b>.</p>
+        <p class="label">The diagram above shows how margins & borders work.</p>
     </div>
 
 </body>
