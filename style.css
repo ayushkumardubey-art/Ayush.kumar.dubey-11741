@@ -153,7 +153,7 @@ h2::before {
     border-radius: 5px;
 }
 
-/* --- TECH STACK (New Section Style) --- */
+/* --- TECH STACK (Elements) --- */
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -239,17 +239,17 @@ h2::before {
     color: var(--bg-color); 
 }
 
-/* --- NEW: LIVE CODE BUTTONS (Added this section) --- */
+/* --- LIVE CODE BUTTONS (Exp 1, Exp 2, etc.) --- */
 .question-links {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    justify-content: center;
+    justify-content: flex-start; /* Aligns buttons to the left */
     margin-top: 5px;
 }
 
 .btn-small {
-    background-color: #f0f0f0;
+    background-color: #f1f2f6;
     color: #333;
     padding: 6px 12px;
     border-radius: 6px;
@@ -265,9 +265,10 @@ h2::before {
     color: white;
     border-color: var(--primary-color);
     transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(108, 92, 231, 0.2);
 }
 
-/* Dark mode specific for small buttons */
+/* Dark mode fixes for small buttons */
 body.dark-mode .btn-small {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -276,7 +277,7 @@ body.dark-mode .btn-small {
 
 body.dark-mode .btn-small:hover {
     background-color: var(--secondary-color);
-    color: #2d3436; /* Dark text for better contrast on light blue */
+    color: #2d3436;
     border-color: var(--secondary-color);
 }
 
