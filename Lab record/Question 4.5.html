@@ -1,46 +1,76 @@
-Q.4.5: Create a simple drawing using the <canvas> element
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Canvas Drawing Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        canvas {
-            border: 2px solid black;
-            margin-top: 20px;
+        /* 1. Page Styling (Centers everything) */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
+
+        /* 2. White Card Styling */
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* 3. Canvas Styling */
+        canvas {
+            border: 2px solid #333;
+            border-radius: 4px;
+            background-color: #fafafa;
+            margin-top: 10px;
+            cursor: crosshair;
+        }
+
+        h2 { color: #333; margin-bottom: 5px; }
+        p { color: #666; margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
-    <center>
-        <h2>Simple Drawing Using &lt;canvas&gt; (shapes + colors)</h2>
+    <div class="card">
+        <h2>Q 4.5: HTML5 Canvas Drawing</h2>
+        <p>Simple drawing using shapes & colors</p>
+
         <canvas id="myCanvas" width="400" height="300"></canvas>
-    </center>
+    </div>
 
     <script>
-        // Get canvas and its drawing context
+        // Get canvas and context
         const canvas = document.getElementById("myCanvas");
         const ctx = canvas.getContext("2d");
 
-        // Draw a filled rectangle
-        ctx.fillStyle = "lightblue"; // Fill color
-        ctx.fillRect(50, 50, 150, 100); // (x, y, width, height)
+        // 1. Draw a Filled Rectangle (Blue)
+        ctx.fillStyle = "#3498db"; // Blue color
+        ctx.fillRect(50, 50, 150, 100); // x, y, width, height
 
-        // Draw a filled circle
+        // 2. Draw a Filled Circle (Orange)
         ctx.beginPath();
-        ctx.arc(280, 120, 50, 0, Math.PI * 2); // (x, y, radius, startAngle, endAngle)
-        ctx.fillStyle = "orange";
+        ctx.arc(280, 100, 50, 0, Math.PI * 2); // x, y, radius, startAngle, endAngle
+        ctx.fillStyle = "#e67e22"; // Orange color
         ctx.fill();
+        ctx.closePath();
 
-        // Draw a rectangle outline
-        ctx.strokeStyle = "red";
-        ctx.lineWidth = 3;
+        // 3. Draw a Rectangle Outline (Red)
+        ctx.strokeStyle = "#e74c3c"; // Red border
+        ctx.lineWidth = 4;
         ctx.strokeRect(30, 200, 200, 60);
 
-        // Draw text on canvas
-        ctx.fillStyle = "green";
+        // 4. Draw Text
+        ctx.fillStyle = "#27ae60"; // Green text
         ctx.font = "20px Arial";
-        ctx.fillText("Canvas Drawing", 130, 280);
+        ctx.fillText("My First Canvas!", 250, 240);
     </script>
 
 </body>
