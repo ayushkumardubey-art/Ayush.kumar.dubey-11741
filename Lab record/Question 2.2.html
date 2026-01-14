@@ -4,45 +4,37 @@
     <title>Box Model Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* 1. Background Image Setup */
         body {
-            background-image: url('hq720.jpg');
-            background-size: cover; 
+            background-image: url('imagesboxmodel.png');
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* Keeps image fixed when scrolling */
+            background-attachment: fixed;
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
-            
-            /* Center everything on the screen */
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        /* 2. A White Card to make text readable */
         .demo-container {
-            background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             text-align: center;
-            max-width: 350px; /* Keeps it small and neat */
+            max-width: 350px;
         }
 
-        /* 3. The "Box Model" Example */
         .box-model-example {
-            width: 200px;           /* Small, manageable size */
-            background-color: #e3f2fd; /* Light Blue Content */
+            width: 200px;
+            background-color: #e3f2fd;
             color: #1565c0;
-            
-            /* THE BOX MODEL PROPERTIES */
-            border: 5px solid #1565c0; /* Border */
-            padding: 20px;             /* Padding (Space inside) */
-            margin: 20px auto;         /* Margin (Space outside) */
-            
+            border: 5px solid #1565c0;
+            padding: 20px;
+            margin: 20px auto;
             font-weight: bold;
             border-radius: 8px;
         }
